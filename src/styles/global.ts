@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStlye = createGlobalStyle`
+  :root {
+    font-size: 16px;
+  }
+
   *{
     padding: 0;
     margin: 0;
@@ -15,5 +19,16 @@ export const GlobalStlye = createGlobalStyle`
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
     color: white;
+    outline: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  @media screen and (width <= 768px) {
+    :root {
+      font-size: 80%;
+    }
   }
 `

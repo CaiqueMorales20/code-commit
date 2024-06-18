@@ -11,6 +11,10 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
 
+  @media screen and (width <= 768px) {
+    padding-top: 2rem;
+  }
+
   img {
     width: 9.25rem;
     height: 6.125rem;

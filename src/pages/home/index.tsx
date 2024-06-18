@@ -1,3 +1,11 @@
+import { ProfileCard } from './components/profile-card'
+import { SearchBar } from './components/search-bar'
+
 export function Home() {
-  return <div>home</div>
+  return (
+    <main>
+      <ProfileCard />
+      <SearchBar />
+    </main>
+  )
 }
