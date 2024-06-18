@@ -13,6 +13,7 @@ export const GlobalStlye = createGlobalStyle`
 
   body{
     background-color: ${(props) => props.theme['base-background']};
+    padding-bottom: 14.625rem;
   }
 
   body, textarea, input, button{

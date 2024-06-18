@@ -1,38 +1,18 @@
 import styled from 'styled-components'
 import { mixins } from '../../../../styles/mixins'
 
-export const ProfileCardContainer = styled.div`
+export const HeaderContainer = styled.div`
   padding: 2rem 2.5rem;
   border-radius: 0.625rem;
   background-color: ${(props) => props.theme['base-profile']};
   margin-top: -6.225rem;
   margin-bottom: 4.5rem;
 
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-  @media screen and (width <= 768px) {
-    margin-top: -13.3rem;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  img {
-    width: 9.25rem;
-    height: 9.25rem;
-    border-radius: 0.5rem;
-  }
-
-  header {
+  nav {
     display: flex;
     justify-content: space-between;
-
-    h1 {
-      ${mixins.fonts.titleL}
-      color: ${(props) => props.theme['base-title']};
-      margin-bottom: 0.5rem;
-    }
+    align-items: center;
+    margin-bottom: 1.25rem;
 
     a {
       display: flex;
@@ -51,10 +31,16 @@ export const ProfileCardContainer = styled.div`
     }
   }
 
-  p {
-    ${mixins.fonts.textM}
-    color: ${(props) => props.theme['base-text']};
-    margin-bottom: 1.5rem;
+  h1 {
+    ${mixins.fonts.titleL};
+    color: ${(props) => props.theme['base-title']};
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (width <= 768px) {
+    margin-top: -13.3rem;
+    align-items: flex-start;
+    flex-direction: column;
   }
 `
 

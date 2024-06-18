@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { mixins } from '../../../../styles/mixins'
 
 export const SearchBarContainer = styled.div`
+  margin-bottom: 3rem;
+
   header {
     display: flex;
     justify-content: space-between;
