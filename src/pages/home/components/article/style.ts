@@ -11,17 +11,19 @@ export const ArticleContainer = styled(NavLink)`
   header {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     margin-bottom: 1.25rem;
 
     h3 {
+      width: 100%;
       ${mixins.fonts.titleM};
       color: ${(props) => props.theme['base-title']};
-      max-width: 17.6rem;
     }
 
     time {
-      flex: 1;
+      width: max-content;
       color: ${(props) => props.theme['base-span']};
+      white-space: nowrap;
     }
   }
 

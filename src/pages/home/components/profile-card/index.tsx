@@ -3,35 +3,39 @@ import { Github } from '../../../../assets/icons/github'
 import { Link } from '../../../../assets/icons/link'
 import { People } from '../../../../assets/icons/people'
 import { ProfileCardContainer, SocialsContainer } from './style'
+import { useUser } from '../../../../hooks/use-user'
 
 export function ProfileCard() {
+  const user = useUser()
+
   return (
     <ProfileCardContainer>
-      <img src={'/avatar.png'} alt="" />
+      <img src={user?.avatar_url} alt="" />
       <div>
         <header>
-          <h1>Cameron Williamson</h1>
-          <a href="">
+          <h1>{user?.name}</h1>
+          <a href={user?.html_url} target="_blank" rel="noreferrer">
             github <Link />
           </a>
         </header>
-        <p>
-          Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
-          viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat
-          pulvinar vel mass.
-        </p>
+        <p>{user?.bio}</p>
         <SocialsContainer>
           <div>
             <Github />
-            <span>cameronwll</span>
+            <span>{user?.login}</span>
           </div>
-          <div>
-            <Building />
-            <span>Rocketseat</span>
-          </div>
+          {user?.company ? (
+            <div>
+              <Building />
+              <span>{user.company}</span>
+            </div>
+          ) : (
+            <></>
+          )}
+
           <div>
             <People />
-            <span>32 seguidores</span>
+            <span>{user?.followers} seguidores</span>
           </div>
         </SocialsContainer>
       </div>

@@ -24,37 +24,41 @@ export const ProfileCardContainer = styled.div`
     border-radius: 0.5rem;
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
+  & > div {
+    flex: 1;
 
-    h1 {
-      ${mixins.fonts.titleL}
-      color: ${(props) => props.theme['base-title']};
-      margin-bottom: 0.5rem;
-    }
-
-    a {
+    header {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: ${(props) => props.theme.blue};
-      text-transform: uppercase;
-      ${mixins.fonts.link}
-      margin-bottom: 0.75rem;
+      justify-content: space-between;
 
-      svg {
-        width: 0.7rem;
-        height: 0.7rem;
-        fill: ${(props) => props.theme.blue};
+      h1 {
+        ${mixins.fonts.titleL}
+        color: ${(props) => props.theme['base-title']};
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: ${(props) => props.theme.blue};
+        text-transform: uppercase;
+        ${mixins.fonts.link}
+        margin-bottom: 0.75rem;
+
+        svg {
+          width: 0.7rem;
+          height: 0.7rem;
+          fill: ${(props) => props.theme.blue};
+        }
       }
     }
-  }
 
-  p {
-    ${mixins.fonts.textM}
-    color: ${(props) => props.theme['base-text']};
-    margin-bottom: 1.5rem;
+    p {
+      ${mixins.fonts.textM}
+      color: ${(props) => props.theme['base-text']};
+      margin-bottom: 1.5rem;
+    }
   }
 `
 
