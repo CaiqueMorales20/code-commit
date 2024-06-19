@@ -66,7 +66,8 @@ export const SocialsContainer = styled.div`
       fill: ${(props) => props.theme['base-label']};
     }
 
-    span {
+    span,
+    time {
       ${mixins.fonts.textM}
       color: ${(props) => props.theme['base-subtitle']};
     }

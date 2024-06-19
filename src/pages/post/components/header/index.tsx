@@ -34,7 +34,7 @@ export function Header(issue: GithubIssue) {
         </div>
         <div>
           <Calendar />
-          <span>{dateDistance}</span>
+          <time dateTime={issue.updated_at}>{dateDistance}</time>
         </div>
         <div>
           <Comments />
