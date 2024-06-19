@@ -25,11 +25,13 @@ export const ProfileCardContainer = styled.div`
   }
 
   & > div {
+    width: 100%;
     flex: 1;
 
     header {
       display: flex;
       justify-content: space-between;
+      width: 100%;
 
       h1 {
         ${mixins.fonts.titleL}

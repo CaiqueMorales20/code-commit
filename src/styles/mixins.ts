@@ -2,6 +2,10 @@ import { css } from 'styled-components'
 
 export const mixins = {
   fonts: {
+    titleXL: css`
+      font-size: 1.8rem;
+      line-height: 130%;
+    `,
     titleL: css`
       font-size: 1.5rem;
       line-height: 130%;

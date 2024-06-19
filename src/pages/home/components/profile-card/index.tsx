@@ -8,23 +8,25 @@ import { useUser } from '../../../../hooks/use-user'
 export function ProfileCard() {
   const user = useUser()
 
+  if (!user) return <></>
+
   return (
     <ProfileCardContainer>
-      <img src={user?.avatar_url} alt="" />
+      <img src={user.avatar_url} alt="" />
       <div>
         <header>
-          <h1>{user?.name}</h1>
-          <a href={user?.html_url} target="_blank" rel="noreferrer">
+          <h1>{user.name}</h1>
+          <a href={user.html_url} target="_blank" rel="noreferrer">
             github <Link />
           </a>
         </header>
-        <p>{user?.bio}</p>
+        <p>{user.bio}</p>
         <SocialsContainer>
           <div>
             <Github />
-            <span>{user?.login}</span>
+            <span>{user.login}</span>
           </div>
-          {user?.company ? (
+          {user.company ? (
             <div>
               <Building />
               <span>{user.company}</span>
@@ -35,7 +37,7 @@ export function ProfileCard() {
 
           <div>
             <People />
-            <span>{user?.followers} seguidores</span>
+            <span>{user.followers} seguidores</span>
           </div>
         </SocialsContainer>
       </div>

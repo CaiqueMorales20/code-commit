@@ -5,8 +5,9 @@ import { Comments } from '../../../../assets/icons/comments'
 import { Github } from '../../../../assets/icons/github'
 import { Link } from '../../../../assets/icons/link'
 import { HeaderContainer, SocialsContainer } from './style'
+import { GithubIssue } from '../../../../@types/issue'
 
-export function Header() {
+export function Header(issue: GithubIssue) {
   return (
     <HeaderContainer>
       <nav>
@@ -14,15 +15,15 @@ export function Header() {
           <ArrowBack />
           voltar
         </NavLink>
-        <a href="">
+        <a href={issue.html_url} target="_blank" rel="noreferrer">
           github <Link />
         </a>
       </nav>
-      <h1>JavaScript data types and data structures</h1>
+      <h1>{issue.title}</h1>
       <SocialsContainer>
         <div>
           <Github />
-          <span>cameronwll</span>
+          <span>{issue.user.login}</span>
         </div>
         <div>
           <Calendar />
@@ -30,7 +31,10 @@ export function Header() {
         </div>
         <div>
           <Comments />
-          <span>5 comentários</span>
+          <span>
+            {issue.comments}{' '}
+            {issue.comments === 1 ? 'comentário' : 'comentários'}
+          </span>
         </div>
       </SocialsContainer>
     </HeaderContainer>
