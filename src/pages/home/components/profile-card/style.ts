@@ -72,7 +72,7 @@ export const SocialsContainer = styled.div`
   @media screen and (width <= 768px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   div {

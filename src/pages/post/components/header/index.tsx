@@ -6,8 +6,15 @@ import { Github } from '../../../../assets/icons/github'
 import { Link } from '../../../../assets/icons/link'
 import { HeaderContainer, SocialsContainer } from './style'
 import { GithubIssue } from '../../../../@types/issue'
+import { formatDistance } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 
 export function Header(issue: GithubIssue) {
+  const dateDistance = formatDistance(new Date(issue.updated_at), new Date(), {
+    addSuffix: true,
+    locale: ptBR,
+  })
+
   return (
     <HeaderContainer>
       <nav>
@@ -27,7 +34,7 @@ export function Header(issue: GithubIssue) {
         </div>
         <div>
           <Calendar />
-          <span>Há 1 dia</span>
+          <span>{dateDistance}</span>
         </div>
         <div>
           <Comments />

@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 
     a {
       display: flex;
@@ -34,7 +34,7 @@ export const HeaderContainer = styled.div`
   h1 {
     ${mixins.fonts.titleL};
     color: ${(props) => props.theme['base-title']};
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   @media screen and (width <= 768px) {
@@ -52,7 +52,7 @@ export const SocialsContainer = styled.div`
   @media screen and (width <= 768px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   div {
